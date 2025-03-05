@@ -1,0 +1,13 @@
+comfyui/data/default/ComfyUI-Manager
+comfyui/data/*.log
+comfyui/models/*
+comfyui/output/*
+
+open-webui/ollama/*
+open-webui/data/*
+
+komga/config/*
+komga/data
+
+ftp/passwd/*
+ftp/data

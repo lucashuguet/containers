@@ -1,0 +1,36 @@
+use_default_settings: true
+
+server:
+  port: 8080
+  bind_address: "0.0.0.0"
+  secret_key: "XavsxoTfZi3fCoYxP4SRQCdHff5KRa1jVbgn9Tmm4Gl0Xc4hOpUmTwWc2VN4S7nR"
+  image_proxy: true
+  limiter: true
+
+ui:
+  autofocus : true
+  default_theme: simple
+  theme_args:
+    simple_style: black
+  default_locale: "en"
+  results_on_new_tab: true
+  static_use_hash: true
+  hotkeys: vim
+
+outgoing:
+  request_timeout: 3.0
+
+search:
+  safe_search: 0
+  autocomplete: ""
+  default_lang: ""
+  formats:
+    - html
+    - csv
+    - json
+
+enabled_plugins:
+  - "Open Access DOI rewrite"
+
+redis:
+  url: redis://redis:6379/0

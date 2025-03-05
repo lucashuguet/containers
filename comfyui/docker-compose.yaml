@@ -1,0 +1,26 @@
+services:
+  comfyui:
+    build: .
+    volumes:
+      - ./models:/home/user/app/models
+      - ./output:/home/user/app/output
+      - ./data:/home/user/app/user
+    networks:
+      - default
+    container_name: comfyui
+    environment:
+      - CLI_ARGS=--lowvram
+    tty: true
+    ports:
+      - 4003:7860
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: cdi
+              device_ids:
+                - nvidia.com/gpu=all
+              capabilities: [gpu]
+
+networks:
+  default:

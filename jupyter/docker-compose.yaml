@@ -1,0 +1,6 @@
+services:
+  jupyter:
+    container_name: jupyter
+    build: ./
+    ports:
+      - "4005:8888"
