@@ -6,7 +6,7 @@ services:
       - ./output:/home/user/app/output
       - ./data:/home/user/app/user
     networks:
-      - default
+      - shared_network
     container_name: comfyui
     environment:
       - CLI_ARGS=--lowvram
@@ -23,4 +23,5 @@ services:
               capabilities: [gpu]
 
 networks:
-  default:
+  shared_network:
+    external: true

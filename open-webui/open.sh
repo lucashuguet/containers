@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-GDK_BACKEND=x11 surf http://localhost:4004
+firefox --private-window http://localhost:4004

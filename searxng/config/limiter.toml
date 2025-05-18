@@ -4,3 +4,8 @@
 [botdetection.ip_limit]
 # activate link_token method in the ip_limit method
 link_token = true
+
+[botdetection.ip_lists]
+pass_ip = [
+  "172.19.0.5" # open-webui container
+]
