@@ -23,7 +23,7 @@ outgoing:
 search:
   safe_search: 0
   autocomplete: ""
-  default_lang: ""
+  default_lang: "all"
   formats:
     - html
     - csv
