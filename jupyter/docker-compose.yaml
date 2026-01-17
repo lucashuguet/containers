@@ -4,3 +4,5 @@ services:
     build: ./
     ports:
       - "4005:8888"
+    volumes:
+      - "./work:/home/jovyan/work"
