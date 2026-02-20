@@ -15,4 +15,6 @@ ftp/data
 nextcloud/db
 nextcloud/html
 
+pihole/etc
+
 */.env
