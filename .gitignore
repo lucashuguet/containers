@@ -11,3 +11,8 @@ komga/data
 
 ftp/passwd/*
 ftp/data
+
+nextcloud/db
+nextcloud/html
+
+*/.env
