@@ -3,6 +3,8 @@ comfyui/data/*.log
 comfyui/models/*
 comfyui/output/*
 
+hermes/hermes/
+
 open-webui/ollama/*
 open-webui/data/*
 

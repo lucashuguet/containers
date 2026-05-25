@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+firefox --private-window http://localhost:9119
