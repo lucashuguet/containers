@@ -1,9 +1,9 @@
-comfyui/data/default/ComfyUI-Manager
 comfyui/data/*.log
+comfyui/data/*db*
+comfyui/data/__manager/
+comfyui/data/default/ComfyUI-Manager
 comfyui/models/*
 comfyui/output/*
-
-hermes/hermes/
 
 open-webui/ollama/*
 open-webui/data/*
@@ -13,9 +13,6 @@ komga/data
 
 ftp/passwd/*
 ftp/data
-
-nextcloud/db
-nextcloud/html
 
 pihole/etc
 

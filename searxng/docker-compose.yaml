@@ -1,26 +1,4 @@
 services:
-  caddy:
-    container_name: searxng_caddy
-    image: docker.io/library/caddy:2-alpine
-    network_mode: host
-    restart: unless-stopped
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
-      - caddy-data:/data:rw
-      - caddy-config:/config:rw
-    environment:
-      - SEARXNG_HOSTNAME=http://localhost:4001
-      - SEARXNG_TLS=internal
-    cap_drop:
-      - ALL
-    cap_add:
-      - NET_BIND_SERVICE
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "1m"
-        max-file: "1"
-
   redis:
     container_name: redis
     image: docker.io/valkey/valkey:8-alpine
@@ -55,7 +33,7 @@ services:
     volumes:
       - ./config:/etc/searxng:rw
     environment:
-      - SEARXNG_BASE_URL=http://localhost:4001/
+      - SEARXNG_BASE_URL=http://localhost:4000/
       - UWSGI_WORKERS=4
       - UWSGI_THREADS=4
     cap_drop:
@@ -64,6 +42,8 @@ services:
       - CHOWN
       - SETGID
       - SETUID
+    dns:
+      - 1.1.1.1
     logging:
       driver: "json-file"
       options:
@@ -75,6 +55,4 @@ networks:
     external: true
 
 volumes:
-  caddy-data:
-  caddy-config:
   valkey-data2:
